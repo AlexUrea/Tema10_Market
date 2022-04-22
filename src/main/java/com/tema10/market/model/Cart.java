@@ -38,5 +38,9 @@ public class Cart {
         return this.ordersCount;
     }
 
+    public List<Products> getProducts(){
+        return products;
+    }
+
 
 }

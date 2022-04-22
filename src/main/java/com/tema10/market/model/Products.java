@@ -8,6 +8,7 @@ public class Products {
     @GeneratedValue
     private Integer productId;
     private Integer quantity;
+    private String name;
 
     private Integer price;
 
@@ -20,5 +21,9 @@ public class Products {
     private Wishlist wishlist;
 
     public Products() {
+    }
+
+    public Products(String name) {
+        this.name = name;
     }
 }

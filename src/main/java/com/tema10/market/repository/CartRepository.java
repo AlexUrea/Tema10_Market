@@ -10,5 +10,7 @@ public interface CartRepository extends CrudRepository<Cart, Integer> {
 
     public Cart getAllProductsById(Integer id);
 
+    public Cart getAll();
+
 
 }

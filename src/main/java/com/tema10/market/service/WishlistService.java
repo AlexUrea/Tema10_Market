@@ -1,5 +1,6 @@
 package com.tema10.market.service;
 
+import com.tema10.market.model.Products;
 import com.tema10.market.model.Wishlist;
 import com.tema10.market.repository.WishlistRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class WishlistService {
         return wishlistRepository.getById(id);
     }
 
-    public void addWishlist(Wishlist wishlist){
-        wishlistRepository.save(wishlist);
+    public void addToWishlist(Integer id, Products product){
+        wishlistRepository.getById(id).addProduct(product);
     }
 }

@@ -9,7 +9,7 @@ public class Wishlist {
     @Column(name = "userId")
     private Integer userId;
     private Integer wishlistId;
-    private Integer quantity;
+    private Integer quantity = 0;
 
     @OneToMany(mappedBy = "wishlist")
     private List<Products> products;
@@ -22,5 +22,12 @@ public class Wishlist {
     public Wishlist() {
     }
 
+    public Wishlist(List<Products> products) {
+        this.products = products;
+        this.quantity++;
+    }
 
+    public void addProduct(Products product){
+        this.products.add(product);
+    }
 }

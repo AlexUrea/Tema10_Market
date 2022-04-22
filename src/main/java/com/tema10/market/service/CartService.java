@@ -28,4 +28,8 @@ public class CartService {
        return cartRepository.getById(id).getOrdersCount();
     }
 
+    public Cart getAllCarts(){
+        return cartRepository.getAll();
+    }
+
 }
